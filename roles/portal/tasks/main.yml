@@ -1,6 +1,6 @@
 - name: Create xs-portal directory tree
   file: path=$item
-        mode=0755
+        mode=0644
         owner=root
         group=root
         state=directory
@@ -12,7 +12,7 @@
 - name: Copy xs-portal php files   
   copy: src=$item
         dest=/var/www/html/xs-portal
-        mode=0755
+        mode=0644
         owner=root
         group=root
   with_fileglob:
@@ -21,7 +21,7 @@
 - name: Copy xs-portal css files   
   copy: src=$item
         dest=/var/www/html/xs-portal
-        mode=0755
+        mode=0644
         owner=root
         group=root
   with_fileglob:
@@ -30,7 +30,7 @@
 - name: Copy xs-portal incl files   
   copy: src=$item
         dest=/var/www/html/xs-portal/incl
-        mode=0755
+        mode=0644
         owner=root
         group=root
   with_fileglob:
@@ -39,7 +39,7 @@
 - name: Copy xs-portal image files   
   copy: src=$item
         dest=/var/www/html/xs-portal/images
-        mode=0755
+        mode=0644
         owner=root
         group=root
   with_fileglob:
@@ -50,5 +50,5 @@
             dest=/etc/httpd/conf.d/
             owner=root
             group=root
-            mode=644
+            mode=0644
   
